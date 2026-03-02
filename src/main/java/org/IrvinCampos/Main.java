@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
-        Desktop desktop = applicationContext.getBean(Desktop.class);
+        Desktop desktop = applicationContext.getBean("desktop",Desktop.class);
         desktop.compile();
 
 //        XML CONFIG Code Below
