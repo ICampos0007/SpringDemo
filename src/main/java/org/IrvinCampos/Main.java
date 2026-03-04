@@ -9,14 +9,20 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
+//        Alien alien= applicationContext.getBean("alien", Alien.class);
+        Alien alien = applicationContext.getBean(Alien.class);
+        alien.setAge(21);
+        System.out.println(alien.getAge());
+        alien.code();
+
 //        with naming
 //        Desktop desktop = applicationContext.getBean("desktop",Desktop.class);
 
-        Desktop desktop = applicationContext.getBean(Desktop.class);
-        desktop.compile();
-
-        Desktop desktop1 = applicationContext.getBean(Desktop.class);
-        desktop1.compile();
+//        Desktop desktop = applicationContext.getBean(Desktop.class);
+//        desktop.compile();
+//
+//        Desktop desktop1 = applicationContext.getBean(Desktop.class);
+//        desktop1.compile();
 
 //        XML CONFIG Code Below
 
