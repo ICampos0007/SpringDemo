@@ -1,9 +1,15 @@
 package org.IrvinCampos;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import java.beans.ConstructorProperties;
 
+@Component
 public class Alien {
     private int age;
+//    @Qualifier("desktop")
     private Computer computer;
 
     public Alien() {
@@ -31,7 +37,8 @@ public class Alien {
     public Computer getComputer() {
         return computer;
     }
-
+    @Autowired
+    @Qualifier("laptop")
     public void setComputer(Computer computer) {
         this.computer = computer;
     }
