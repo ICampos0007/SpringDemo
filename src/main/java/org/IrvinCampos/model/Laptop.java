@@ -1,4 +1,4 @@
-package org.IrvinCampos;
+package org.IrvinCampos.model;
 
 import org.springframework.stereotype.Component;
 

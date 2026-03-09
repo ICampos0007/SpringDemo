@@ -1,9 +1,9 @@
 package org.IrvinCampos.config;
 
-import org.IrvinCampos.Alien;
-import org.IrvinCampos.Computer;
-import org.IrvinCampos.Desktop;
-import org.IrvinCampos.Laptop;
+import org.IrvinCampos.model.Alien;
+import org.IrvinCampos.model.Computer;
+import org.IrvinCampos.model.Desktop;
+import org.IrvinCampos.model.Laptop;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.*;

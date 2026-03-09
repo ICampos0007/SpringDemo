@@ -1,6 +1,9 @@
 package org.IrvinCampos;
 
 import org.IrvinCampos.config.AppConfiguration;
+import org.IrvinCampos.model.Alien;
+import org.IrvinCampos.model.Laptop;
+import org.IrvinCampos.service.LaptopService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,11 +12,17 @@ public class Main {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
+        LaptopService laptopService = applicationContext.getBean(LaptopService.class);
+        laptopService.addLaptop();
+
+        Laptop laptop = applicationContext.getBean(Laptop.class);
+
+
 //        Alien alien= applicationContext.getBean("alien", Alien.class);
-        Alien alien = applicationContext.getBean(Alien.class);
-        alien.setAge(21);
-        System.out.println(alien.getAge());
-        alien.code();
+//        Alien alien = applicationContext.getBean(Alien.class);
+//        alien.setAge(21);
+//        System.out.println(alien.getAge());
+//        alien.code();
 
 //        with naming
 //        Desktop desktop = applicationContext.getBean("desktop",Desktop.class);

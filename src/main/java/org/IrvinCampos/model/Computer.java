@@ -1,4 +1,4 @@
-package org.IrvinCampos;
+package org.IrvinCampos.model;
 
 public interface Computer {
     void compile();
