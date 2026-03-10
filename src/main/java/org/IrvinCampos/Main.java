@@ -13,7 +13,7 @@ public class Main {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
         LaptopService laptopService = applicationContext.getBean(LaptopService.class);
-        laptopService.addLaptop();
+        laptopService.addLaptop(new Laptop());
 
         Laptop laptop = applicationContext.getBean(Laptop.class);
 
